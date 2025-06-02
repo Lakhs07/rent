@@ -1,4 +1,4 @@
-import {createStackNavigator} from '@react-navigation/stack'
+import {createStackNavigator} from '@react-navigation/stack';
 import {DiscoverPage} from '../Screens/DiscoverPage'
 const Stack = createStackNavigator();
 const AppNavigator = () => {

@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
+import { SafeAreaView } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
-import {AppNavigator} from '../Navigation/AppNavigator'
+import AppNavigator from './Navigation/AppNavigator';
 import DiscoverPage from './Screens/DiscoverPage';
 
 export default function App() {
