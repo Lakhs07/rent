@@ -1,14 +1,16 @@
-import { View , StyleSheet ,Text , TouchableOpacity} from "react-native"
+import { View , StyleSheet ,Text , TouchableOpacity} from "react-native";
+import { SafeAreaView } from 'react-native';
+
 
 const DiscoverPage = () => {
     return (
     <SafeAreaView style= {styles.container}>
     <View style={styles.container1}>
-          <Text style={styles.head}>Discover Your </Text>
-          <Text style = {styles.heads}>dream homestay</Text>
-          <Text style={styles.des}>Enjoy the comfort of affordable, rental,</Text>
-          <Text style={styles.des2}>booking with our app</Text>
-          <TouchableOpacity style={styles.button} ><Text style={{color:'white'}}>Get Started</Text></TouchableOpacity>
+          <Text style={styles.title}>Discover Your{'\n'}Dream Homestay</Text>
+          <Text style={styles.subtitle}>
+          Enjoy the comfort of affordable, rental,{'\n'}booking with our app
+          </Text>
+          <TouchableOpacity style={styles.button} ><Text style={{color:'white',textAlign: 'center',fontSize: 16}}>Get Started</Text></TouchableOpacity>
     </View>
  </SafeAreaView>
 );
@@ -26,49 +28,30 @@ const DiscoverPage = () => {
     alignItems: 'center',
     textAlign: 'center'
   },
-  head:{
-    height:50,
-    width:280,
-    position:'absolute',
-    top:160,
-    left:70,
-    fontWeight:600,
-    fontSize:30,
-   
+  title: {
+    fontSize: 38,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#000',
+    top: -260
   },
-  heads:{
-    height:50,
-    width:280,
-    position:'absolute',
-    top:190,
-    left:50,
-    fontWeight:600,
-    fontSize:30,
-   
-  },
-  des:{
-    position:'absolute',
-    top: 278,
-    left:40
-  },
-  des2:{
-    position:'absolute',
-    top: 300,
-    left:87
+  subtitle: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#333',
+    marginVertical: 20,
+    top: -250
   },
   button:{
     position:'absolute',
-    top: 560,
-    left:80,
+    top: 800,
     color:'white',
     backgroundColor:'#775CFF',
-    padding: 8,
-    width:200,
-    paddingLeft:60,
-    borderRadius:3,
+    width:300,
+    borderRadius:8,
     paddingTop: 19,
     paddingBottom:19,
-  }
+  },
 
 });
 export default DiscoverPage
