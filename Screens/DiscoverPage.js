@@ -1,16 +1,19 @@
+import React from "react";
 import { View , StyleSheet ,Text , TouchableOpacity} from "react-native";
 import { SafeAreaView } from 'react-native';
 
 
-const DiscoverPage = () => {
+const DiscoverPage = ({navigation}) => {
     return (
     <SafeAreaView style= {styles.container}>
     <View style={styles.container1}>
           <Text style={styles.title}>Discover Your{'\n'}Dream Homestay</Text>
           <Text style={styles.subtitle}>
-          Enjoy the comfort of affordable, rental,{'\n'}booking with our app
+          Enjoy the comfort of affordable, rental{'\n'}booking with our app
           </Text>
-          <TouchableOpacity style={styles.button} ><Text style={{color:'white',textAlign: 'center',fontSize: 16}}>Get Started</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+            <Text style={{color:'white',textAlign: 'center',fontSize: 16}} >Get Started</Text>
+          </TouchableOpacity>
     </View>
  </SafeAreaView>
 );
@@ -54,4 +57,4 @@ const DiscoverPage = () => {
   },
 
 });
-export default DiscoverPage
+export default DiscoverPage;
